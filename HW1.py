@@ -23,3 +23,20 @@ def evens_and_odds(x: int) -> dict:
         i += 2
         
     return {'evens':evens, 'odds':odds}
+
+#Exercise 3
+from typing import Union
+from datetime import datetime, date, time, timedelta
+
+def time_diff(date_1: str, date_2: str, out: str='float') -> Union[str,float]:
+    """
+    This function takes two strings of dates in the format YYYY-MM-DD and another string with either the key word 'string' or 'float'. 
+    If the key word is 'float' it returns the number of days between the two dates. If the key word is 'string' it returns a string stating how many days are between the two dates.
+    """
+    dt1 = datetime.strptime(date_1, "%Y-%m-%d")
+    dt2 = datetime.strptime(date_2, "%Y-%m-%d")
+    delta = abs((dt1 - dt2).days)
+
+    difference = {'float': delta, 'string': "There are " + str(delta) + " days between the two dates."}
+
+    return difference[out]
