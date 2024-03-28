@@ -4,3 +4,5 @@ def github() -> str:
     """
 
     return "https://github.com/<user>/<repo>/blob/main/<filename.py>"
+
+print("Wow!")
