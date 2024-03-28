@@ -40,3 +40,14 @@ def time_diff(date_1: str, date_2: str, out: str='float') -> Union[str,float]:
     difference = {'float': delta, 'string': "There are " + str(delta) + " days between the two dates."}
 
     return difference[out]
+    
+#Exercise 4
+def reverse(in_list: list) -> list:
+    """
+    This function takes a list and returned a list with the elements ordered in reverse.
+    """
+    reversed = []
+    for i in range(len(in_list)):
+        reversed.append(in_list[-i-1])
+    return reversed
+
