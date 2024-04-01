@@ -1,7 +1,7 @@
 #Exercise 0
 def github() -> str:
     """
-    Some docstrings.
+    This function returns a string that is the link to the github for this assignment
     """
 
     return "https://github.com/Julienmjohnson/Econ-481-HW-1/blob/main/HW1.py"
@@ -9,7 +9,7 @@ def github() -> str:
 #Exercise 2
 def evens_and_odds(x: int) -> dict:
     """
-    this function takes a natural number n as an input and returns a dictionary where the key 'evens' is the sum of all even terms less than n and where the key 'odds' is the sum of all terms less than n
+    This function takes a natural number n as an input and returns a dictionary where the key 'evens' is the sum of all even terms less than n and where the key 'odds' is the sum of all terms less than n
     """
     evens = 0
     odds = 0
@@ -43,7 +43,7 @@ def time_diff(date_1: str, date_2: str, out: str='float') -> Union[str,float]:
 #Exercise 4
 def reverse(in_list: list) -> list:
     """
-    This function takes a list and returned a list with the elements ordered in reverse.
+    This function takes a list and returns the same list with the elements ordered in reverse.
     """
     reversed = []
     for i in range(len(in_list)):
