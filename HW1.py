@@ -55,7 +55,7 @@ def prob_k_heads(n: int, k: int) -> float:
     """
     The function takes two integers n and k where n is greater than or equal to k. It returns a float representing the probability of flipping a coin n times and having exactly k of them turn up heads. 
     """
-    numerator =1 1
+    numerator =1 
     denominator = 1
     for i in range(n-k+1, n+1):
         numerator *= i
@@ -65,3 +65,9 @@ def prob_k_heads(n: int, k: int) -> float:
         denominator *= 2
     
     return numerator/denominator
+
+print(github())
+print(evens_and_odds(4))
+print(time_diff('2020-12-20','2021-11-17'))
+print(reverse([1,2,3,'a','b']))
+print(prob_k_heads(8,7))
