@@ -32,8 +32,8 @@ def time_diff(date_1: str, date_2: str, out: str='float') -> Union[str,float]:
     """
     This function takes two strings of dates in the format YYYY-MM-DD and another string with either the key word 'string' or 'float'. If the key word is 'float' it returns the number of days between the two dates. If the key word is 'string' it returns a string stating how many days are between the two dates.
     """
-    dt1 = datetime.strptime(date_1, "%Y-%m-%d")
-    dt2 = datetime.strptime(date_2, "%Y-%m-%d")
+    dt1 = datetime.strptime(date_1, "%Y-%M-%D")
+    dt2 = datetime.strptime(date_2, "%Y-%M-%D")
     delta = abs((dt1 - dt2).days)
 
     difference = {'float': delta, 'string': "There are " + str(delta) + " days between the two dates."}
@@ -65,9 +65,3 @@ def prob_k_heads(n: int, k: int) -> float:
         denominator *= 2
     
     return numerator/denominator
-
-print(github())
-print(evens_and_odds(4))
-print(time_diff('2020-12-20','2021-11-17'))
-print(reverse([1,2,3,'a','b']))
-print(prob_k_heads(8,7))
