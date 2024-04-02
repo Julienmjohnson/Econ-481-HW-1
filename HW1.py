@@ -30,10 +30,10 @@ from datetime import datetime, date, time, timedelta
 
 def time_diff(date_1: str, date_2: str, out: str='float') -> Union[str,float]:
     """
-    This function takes two strings of dates in the format YYYY-MM-DD and another string with either the key word 'string' or 'float'. If the key word is 'float' it returns the number of days between the two dates. If the key word is 'string' it returns a string stating how many days are between the two dates.
+    This function takes two strings of dates in the format YYYY-MM-DD and another string with either the key word 'string' or 'float'. If the key word is 'float' it returns the number of days between the two dates. If the key word is 'string' it returns a string stating how many days are between the two da
     """
-    dt1 = datetime.strptime(date_1, "%Y-%M-%D")
-    dt2 = datetime.strptime(date_2, "%Y-%M-%D")
+    dt1 = datetime.strptime(date_1, "%Y-%M-%d")
+    dt2 = datetime.strptime(date_2, "%Y-%M-%d")
     delta = abs((dt1 - dt2).days)
 
     difference = {'float': delta, 'string': "There are " + str(delta) + " days between the two dates."}
@@ -53,7 +53,7 @@ def reverse(in_list: list) -> list:
 #Exercise 5
 def prob_k_heads(n: int, k: int) -> float:
     """
-    The function takes two integers n and k where n is greater than or equal to k. It returns a float representing the probability of flipping a coin n times and having exactly k of them turn up heads. 
+    The function takes two integers n and k where n is greater than or equal to k. It returns a float representing the probability of flipping a coin n times and having exactly k of them turn up heads.
     """
     numerator =1 
     denominator = 1
